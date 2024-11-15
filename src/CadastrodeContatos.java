@@ -33,7 +33,7 @@ public class CadastrodeContatos extends JFrame {
         add(new JLabel("Email:"));
         add(txtEmail);
         add(btnAdicionar);
-        add(new JScrollPane(listContatos)); // Para exibir a lista de contatos
+        add(new JScrollPane(listContatos)); //
         add(btnRemover);
 
 
@@ -49,24 +49,24 @@ public class CadastrodeContatos extends JFrame {
         String telefone = txtTelefone.getText().trim();
         String email = txtEmail.getText().trim();
 
-        // Verificando se todos os campos foram preenchidos
+
         if (nome.isEmpty() || telefone.isEmpty() || email.isEmpty()) {
             JOptionPane.showMessageDialog(this, "Todos os campos devem ser preenchidos.", "Erro", JOptionPane.ERROR_MESSAGE);
         } else {
-            // Adiciona o contato na lista
+
             model.addElement("Nome: " + nome + " | Tel: " + telefone + " | Email: " + email);
-            // Limpa os campos após adicionar
+
             txtNome.setText("");
             txtTelefone.setText("");
             txtEmail.setText("");
         }
     }
 
-    // Função para remover contato
+
     private void removerContato() {
         int index = listContatos.getSelectedIndex();
         if (index != -1) {
-            model.remove(index); // Remove o contato selecionado
+            model.remove(index);
         } else {
             JOptionPane.showMessageDialog(this, "Selecione um contato para remover.", "Erro", JOptionPane.ERROR_MESSAGE);
         }
