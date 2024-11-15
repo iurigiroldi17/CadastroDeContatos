@@ -33,7 +33,7 @@ public class CadastrodeContatos extends JFrame {
         add(new JLabel("Email:"));
         add(txtEmail);
         add(btnAdicionar);
-        add(new JScrollPane(listContatos)); //
+        add(new JScrollPane(listContatos));
         add(btnRemover);
 
 
